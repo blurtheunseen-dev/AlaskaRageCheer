@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alaska Rage Cheer | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.visited #splash, .pre-visited #splash { display: none !important; }
+    
+    #splash {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle, #3d1466 0%, #0b0512 100%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      z-index: 1000; text-align: center; padding: 1rem; transition: opacity 0.5s ease;
+    }
+    #splash h1, #splash h2 { font-family: 'BeerMoney', sans-serif; text-shadow: 2px 2px 4px #000; }
+    #splash h1 { font-size: 2.8rem; color: #f1c40f; margin-bottom: 0.5rem; }
+    #splash h2 { font-size: 2rem; color: #fff; margin-bottom: 2rem; }
+    #splash button {
+      padding: 1rem 2.5rem; font-size: 1.2rem; color: #0b0512;
+      background: linear-gradient(180deg, #ffe57f 0%, #d4af37 100%);
+      border: 2px solid #fff; border-radius: 30px; cursor: pointer; font-weight: bold;
+    }
+
+    .hero-home h1 { 
+      font-family: 'BeerMoney', sans-serif; font-size: 5.2rem; max-width: 1200px; margin: 0 auto 0.5rem; 
+      color: #f1c40f; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 4px 8px rgba(0,0,0,0.8);
+    }
+    .hero-home h2 { 
+      font-family: 'BeerMoney', sans-serif; font-size: 3rem; color: #ffffff; margin-bottom: 2rem; 
+      text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0px 4px 8px rgba(0,0,0,0.8); 
+    }
+    .mission-box {
+      max-width: 800px; margin: 2rem auto 0; padding: 2rem; background-color: rgba(0, 0, 0, 0.7); 
+      border: 2px solid #3d1466; border-radius: 8px; text-align: center;
+    }
+    .mission-box h3 {
+      font-size: 1.2rem; color: #5b218a; line-height: 1.6;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 0px 4px 8px rgba(0,0,0,0.8);
+    }
+  </style>
+  <script>
+    if (sessionStorage.getItem("splashSeen") === "true") {
+      document.documentElement.classList.add("pre-visited");
+    }
+  </script>
+</head>
+<body>
+
+  <div id="splash">
+    <h1>WILL YOU JOIN US FOR THE 2026/2027 SEASON?</h1>
+    <h2>LET'S RAGE!</h2>
+    <button onclick="enterSite()">Enter Site</button>
+  </div>
+
+  <header></header>
+
+  <section class="hero hero-home">
+    <h1>WILL YOU JOIN US FOR THE 2026/2027 SEASON?</h1>
+    <h2>LET'S RAGE!</h2>
+    <div class="mission-box">
+      <h3>"Our Mission is to empower athletes of all ages in Alaska through elite cheerleading instruction and tumbling fundamentals, fostering resilience, teamwork, and personal excellence both on and off the mat."</h3>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="card">
+      <div>
+        <h3>Tiny Team</h3>
+        <p>Ages 4-6 | Practice: Wednesdays 5:15PM - 6:15PM</p>
+      </div>
+      <a href="AKTiny.html" class="btn">View Team Details</a>
+    </div>
+    <div class="card">
+      <div>
+        <h3>Mini Team</h3>
+        <p>Ages 7-8 | Practice: Tue & Thu 5:00PM - 6:30PM</p>
+      </div>
+      <a href="AKMini.html" class="btn">View Team Details</a>
+    </div>
+    <div class="card">
+      <div>
+        <h3>Youth Team</h3>
+        <p>Ages 9-16 | Practice: Tue & Thu 6:30PM - 8:00PM</p>
+      </div>
+      <a href="AKYouth.html" class="btn">View Team Details</a>
+    </div>
+  </main>
+
+  <footer></footer>
+<!-- Script that injects header & footer -->
+  <script src="nav.js"></script>
+  <script>
+    function enterSite() {
+      var splash = document.getElementById("splash");
+      splash.style.opacity = "0";
+      setTimeout(function() { splash.style.display = "none"; }, 500);
+      try { sessionStorage.setItem("splashSeen", "true"); } catch (e) {}
+    }
+  </script>
+</body>
+</html>
