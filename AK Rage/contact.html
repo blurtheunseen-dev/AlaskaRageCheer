@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alaska Rage Cheer | Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-container { max-width: 1100px; grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .map-box { 
+      background-color: rgba(23, 9, 38, 0.92); border: 2px solid #3d1466; 
+      border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.6); min-height: 350px; 
+    }
+    .map-box iframe { width: 100%; height: 100%; border: 0; min-height: 350px; }
+    
+    .highlight { color: #d4af37; font-weight: bold; }
+    .phone-link { color: #d4af37; text-decoration: none; font-weight: bold; }
+    .phone-link:hover { text-decoration: underline; }
+    
+    .card form { display: flex; flex-direction: column; margin-top: 0.5rem; }
+    .card label { color: #3498db; font-size: 0.9rem; margin-bottom: 0.3rem; text-transform: uppercase; font-family: 'Arial Black', sans-serif; }
+    .card input, .card textarea {
+      background-color: #e0e0e0; border: 1px solid #3d1466; border-radius: 4px;
+      padding: 0.7rem; margin-bottom: 1rem; color: #000000; font-family: sans-serif; font-size: 1rem;
+    }
+    .card textarea { resize: vertical; min-height: 100px; }
+    .card button[type="submit"] {
+      background-color: #4a5568; color: #ffffff; border: none; border-radius: 4px;
+      padding: 0.85rem; font-family: 'Arial Black', sans-serif; font-size: 1rem; cursor: pointer;
+      text-transform: uppercase; transition: background-color 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .card button[type="submit"]:hover { background-color: #2d3748; }
+
+    @media(max-width: 768px) {
+      .contact-container { grid-template-columns: 1fr; }
+    }
+	 .team-banner { 
+      text-align: center; padding: 1rem 1rem; 
+      background: radial-gradient(circle, rgba(45, 17, 77, 0.9) 0%, rgba(11, 5, 18, 0.9) 80%); 
+    }
+    .team-banner h1 { font-size: 3rem; color: #f1c40f; }
+  </style>
+</head>
+<body>
+
+  <header></header>
+
+  <div class="team-banner">
+    <h1>GET IN TOUCH</h1>
+    <p style="color: #fff; margin-top: 0.5rem; font-family: sans-serif;"></p>
+  </div>
+
+  <main class="container contact-container">
+    
+    <div class="card">
+      <h3 style="text-align: center;">We'd Love to Hear From You!</h3>
+      <p>Have questions about team placements, practice schedules, or private lessons? Reach out to us directly anytime.</p>
+      <p>📞 <span class="highlight">Call / Text:</span> <a href="tel:9079826362" class="phone-link">907-982-6362</a></p>
+      <p style="margin-bottom: 1.5rem;">✉️ <span class="highlight">Email:</span> akragecheer@gmail.com</p>
+
+      <h3 style="margin-bottom: 0.8rem; text-align: center;">SEND A MESSAGE</h3>
+      <form action="#" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+	
+	<div class="map-box">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1896.7229537490475!2d-149.2779717869046!3d61.615201475700054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x56c8e022e9dc2b9d%3A0xc3b780f225a5159b!2s3051%20N%20Greentree%20St%20%23103%2C%20Wasilla%2C%20AK%2099654!5e0!3m2!1sen!2sus!4v1788571781554!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </main>
+
+  <footer></footer>
+<!-- Script that injects header & footer -->
+  <script src="nav.js"></script>
+</body>
+</html>
