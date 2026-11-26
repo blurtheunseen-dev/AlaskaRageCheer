@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="dropdown-content">
             <a href="AKTiny.html">Tiny (Ages 4-6)</a>
             <a href="AKMini.html">Mini (Ages 7-8)</a>
-            <a href="AKYouth.html">Youth (Ages 9-16)</a>            
+            <a href="AKYouth.html">Junior (Ages 9-16)</a>            
           </div>
         </li>
         <li class="dropdown">
